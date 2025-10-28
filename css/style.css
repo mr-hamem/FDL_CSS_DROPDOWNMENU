@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+#navbar{
+    background: rgb(48, 47, 47);
+    
+}
+#navbar img{
+    width: 20px;
+    filter: invert(1);
+    margin-top: 9px;
+}
+#navbar ul{
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    padding: 10px 0;
+    align-items: center;
+}
+#navbar ul li a{
+    color: #8a8a8a;
+    font-family: "Poppins", sans-serif;
+    border-bottom: 1px solid transparent;
+    transition: .2s;
+}
+#navbar ul li:hover > a{
+    color: orangered;
+    border-bottom: 1px solid orangered;
+}
+#navbar .submenu{
+    margin-top: 50px;
+    position: absolute;
+    display: block;
+    border: 1px solid #ccc;
+    border-top: 2px solid orangered;
+    min-width: 200px;
+    padding: 10px 8px;
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+#navbar ul li:hover > .submenu{
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0;
+}
+#navbar li .submenu li a{
+    display: block;
+    padding: 10px 0;
+}
+#navbar li .submenu li:hover a{
+    margin-left: 10px;
+}
+#navbar .submenu .submenu{
+    left: 100%;
+}
